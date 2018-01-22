@@ -1,0 +1,4 @@
+server:
+  port: 8082
+consumer:
+  resource: http://localhost:8081/ship
