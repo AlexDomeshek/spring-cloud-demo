@@ -12,5 +12,6 @@
         <module>consumer</module>
         <module>producer</module>
         <module>common</module>
+        <module>configserver</module>
     </modules>
 </project>
