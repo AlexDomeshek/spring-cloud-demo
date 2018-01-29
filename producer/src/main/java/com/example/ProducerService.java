@@ -23,8 +23,9 @@ public class ProducerService {
         }
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_JSON);
-        HttpEntity<Shipment> request = new HttpEntity<Shipment>(shipment, headers);
+        HttpEntity<Shipment> request = new HttpEntity(shipment, headers);
         ResponseEntity<Integer> response = restTemplate.postForEntity(consumerResource, request, Integer.class);
+        System.out.println(response.getBody());
         return response.getBody();
     }
 }

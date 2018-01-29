@@ -13,7 +13,9 @@ public class ProducerConfiguration {
     private ObjectMapper objectMapper;
 
     @Bean
-    public RestTemplate shipmentTemplate() {RestTemplate restTemplate = new RestTemplate();
+    public RestTemplate shipmentTemplate() {
+        RestTemplate restTemplate = new RestTemplate();
         restTemplate.getMessageConverters().add(new MappingJackson2HttpMessageConverter(objectMapper));
-        return restTemplate;}
+        return restTemplate;
+    }
 }

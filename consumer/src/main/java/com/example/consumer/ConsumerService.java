@@ -9,7 +9,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class ConsumerService {
 
-    @RequestMapping(value = "/ship", method = RequestMethod.POST, consumes = "application/json")
+    @RequestMapping(value = "/ship",
+            method = RequestMethod.POST,
+            consumes = "application/json")
     public int handleShipment(@RequestBody Shipment shipment) {
         // acknowledge by returning the order size
         return shipment.getItems().size();
